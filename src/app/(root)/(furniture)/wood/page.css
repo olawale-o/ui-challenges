@@ -1,0 +1,13 @@
+.bg {
+    background: url("/furniture/hero.png");
+    position: relative;
+}
+
+.bg::before {
+    background: rgba(101, 54, 13, 0.62);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
