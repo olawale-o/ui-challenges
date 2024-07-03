@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Metropolis";
+    src: url("../../public/fonts/metropolis/Metropolis-Black.otf")
+        format("opentype");
+    /* font-weight: 300;
+    font-style: normal; */
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("../../public/fonts/metropolis/Metropolis-Regular.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("../../public/fonts/metropolis/Metropolis-Bold.otf")
+        format("opentype");
+    /* font-weight: 400;
+    font-style: normal; */
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("../../public/fonts/metropolis/Metropolis-Medium.otf")
+        format("opentype");
+    /* font-weight: 400;
+    font-style: italic; */
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("../../public/fonts/metropolis/Metropolis-SemiBold.otf")
+        format("opentype");
+    /* font-weight: 600;
+    font-style: normal; */
+}
+
+@layer base {
+    :root {
+        --font-metropolis: "Metropolis", sans-serif;
+    }
+}
+
 body,
 p,
 header,
