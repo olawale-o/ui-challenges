@@ -1,5 +1,22 @@
 import Link from "next/link";
 
+const whys = [
+  {
+    id: 1,
+    title: "Luxury facilities",
+    text: "The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.",
+  },
+  {
+    id: 2,
+    title: "Affordable Price",
+    text: "You can get a workspace of the highst quality at an affordable price and still enjoy the facilities that are oly here.",
+  },
+  {
+    id: 3,
+    title: "Many Choices",
+    text: "We provide many unique work space choices so that you can choose the workspace to your liking.",
+  },
+];
 const footerLinks = [
   {
     id: 1,
@@ -12,6 +29,59 @@ const footerLinks = [
     links: ["Beds", "Chair", "All"],
   },
 ];
+
+const WhyUs = () => {
+  return (
+    <div className="">
+      <div className="px-20 py-[120px]">
+        <div className="flex gap-x-[40px]">
+          <div className="min-w-[242px] flex-grow flex place-items-center">
+            <h2 className="font-gilroy-bold text-[#1e1e1e] text-[42px] font-normal">
+              Why <br />
+              Choosing Us
+            </h2>
+          </div>
+          <div className="grid gap-x-7">
+            {whys.map((why) => (
+              <li key={why.id} className="row-start-1 list-none">
+                <div className="text-[#1e1e1e] font-normal font-gilroy-bold text-2xl">
+                  {why.title}
+                </div>
+                <div className="mt-5">
+                  <div className="text-base text-start text-[#1e1e1e] leading-[29.6px] font-gilroy-regular">
+                    {why.text}
+                  </div>
+                </div>
+                <div className="mt-3.5">
+                  <Link
+                    href="/"
+                    className="inline-flex items-center justify-between text-sm leading-[25.9px] font-normal font-gilroyMedium text-[#F57E00]"
+                  >
+                    More Info{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="24"
+                      viewBox="0 0 48 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.5 12.4002H42M42 12.4002C42 12.4002 37.5119 9.44867 36.6 7.00024M42 12.4002C42 12.4002 38.0324 15.1736 36.6 17.8002"
+                        stroke="#E58411"
+                        style={{ stroke: "#E58411", strokeOpacity: 1 }}
+                        strokeLinecap="square"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Footer = () => {
   return (
@@ -161,6 +231,7 @@ const Footer = () => {
 export default function Panto() {
   return (
     <div>
+      <WhyUs />
       <Footer />
     </div>
   );
