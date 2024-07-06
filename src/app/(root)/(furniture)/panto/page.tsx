@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const whys = [
   {
@@ -76,6 +77,105 @@ const WhyUs = () => {
                 </div>
               </li>
             ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ExperimentRentals = () => {
+  return (
+    <div className="pb-[100px]">
+      <div className="grid grid-cols-2 gap-x-[141px]">
+        <div className="col-span-1 relative">
+          <figure className="absolute -top-[66px] rounded-[20px] -left-[65px] h-full w-full aspect-[4/3]">
+            <div className="absolute inset-0 h-full w-full rounded-[20px]">
+              <Image
+                className="absolute w-full h-full inset-0 object-cover rounded-[20px]"
+                alt="Panto Sofa"
+                sizes="100vw"
+                src={"/furniture/white-bg-one.png"}
+                fill
+              />
+            </div>
+          </figure>
+
+          <figure className="relative -left-[27px] w-full aspect-[4/3] rounded-[20px]">
+            <figure className="absolute bottom-[72px] top-[72px] rounded-[20px] -right-[61px] w-full aspect-[16/9]">
+              <div className="absolute inset-0 h-full w-full rounded-[20px]">
+                <Image
+                  className="absolute w-full h-full inset-0 object-cover rounded-[20px]"
+                  alt="Panto Sofa"
+                  sizes="100vw"
+                  src={"/furniture/white-bg-one.png"}
+                  fill
+                />
+              </div>
+            </figure>
+            <figure className="absolute top-[52px] h-[423px] rounded-[49px] left-[27px] right-[27px] aspect-[4/3]">
+              <div className="absolute inset-0 h-full w-full rounded-[49px]">
+                <Image
+                  className="absolute w-full h-full inset-0 object-cover rounded-[49px]"
+                  alt="Panto Sofa"
+                  sizes="100vw"
+                  src={"/furniture/blur-bg.png"}
+                  fill
+                />
+              </div>
+            </figure>
+
+            <div className="absolute inset-0 h-full w-full rounded-[20px]">
+              <Image
+                className="absolute w-full h-full inset-0 object-cover rounded-[20px]"
+                alt="Panto Sofa"
+                sizes="100vw"
+                src={"/furniture/panto-sofa.png"}
+                fill
+              />
+            </div>
+          </figure>
+        </div>
+        <div className="col-span-1 pe-[141px]">
+          <div>
+            <div className="text-[#F47E00] text-lg uppercase tracking-[3.1px] font-gilroy-bold font-normal">
+              experiences
+            </div>
+          </div>
+          <div className="mt-5">
+            <h3 className="text-[#1e1e1e] text-[42px] font-normal font-gilroy-bold uppercase">
+              we provide you the best experience
+            </h3>
+          </div>
+          <div className="mt-5">
+            <div className="text-lg text-[#1e1e1e] font-gilroy-regular leading-[33.33px]">
+              You don’t have to worry about the result because all of these
+              interiors are made by people who are professionals in their fields
+              with an elegant and lucurious style and with premium quality
+              materials
+            </div>
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/"
+              className="inline-flex items-center text-[#F57E00] font-gilroy-regular text-sm leading-[25.9px] font-normal"
+            >
+              More Info
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="24"
+                viewBox="0 0 48 24"
+                fill="none"
+              >
+                <path
+                  d="M4.5 12.4005H42M42 12.4005C42 12.4005 37.5119 9.44891 36.6 7.00049M42 12.4005C42 12.4005 38.0324 15.1739 36.6 17.8005"
+                  stroke="#E58411"
+                  style={{ stroke: "#E58411", strokeOpacity: 1 }}
+                  strokeLinecap="square"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
@@ -232,6 +332,7 @@ export default function Panto() {
   return (
     <div>
       <WhyUs />
+      <ExperimentRentals />
       <Footer />
     </div>
   );
