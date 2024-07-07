@@ -87,7 +87,7 @@ const WhyUs = () => {
 const ExperimentRentals = () => {
   return (
     <div className="pb-[100px]">
-      <div className="grid grid-cols-2 gap-x-[141px]">
+      <div className="grid grid-cols-2 gap-x-[130px]">
         <div className="col-span-1 relative">
           <figure className="absolute -top-[66px] rounded-[20px] -left-[65px] h-full w-full aspect-[4/3]">
             <div className="absolute inset-0 h-full w-full rounded-[20px]">
