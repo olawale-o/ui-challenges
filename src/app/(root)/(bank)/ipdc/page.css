@@ -1,0 +1,8 @@
+.bg {
+    background-image: url("/ipdc/family-photo.png");
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: right bottom;
+    background-color: yellow;
+}

@@ -42,9 +42,48 @@
     font-style: normal; */
 }
 
+@font-face {
+    font-family: "Gilroy";
+    src: url("../../public/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url("../../public/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("../../public/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: medium;
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url("../../public/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: semibold;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../../public/fonts/gilroy/Gilroy-Heavy.ttf") format("truetype");
+    font-weight: 700;
+    font-style: bold;
+}
+
 @layer base {
     :root {
         --font-metropolis: "Metropolis", sans-serif;
+        --font-gilroy: "Gilroy", sans-serif;
+        --font-gilroy-medium: "Gilroy-Mediun", sans-serif;
+        --font-gilroy-bold: "Gilroy-Bold", sans-serif;
+        --font-gilroy-regular: "Gilroy-Regular", sans-serif;
     }
 }
 

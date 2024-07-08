@@ -1,5 +1,0 @@
-.bg {
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
-
-    filter: blur(25px);
-}

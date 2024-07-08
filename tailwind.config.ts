@@ -10,6 +10,10 @@ const config: Config = {
     extend: {
       fontFamily: {
         metropolis: "var(--font-metropolis)",
+        gilroy: "var(--font-gilroy)",
+        gilroyMedium: "var(--font-gilroy-medium)",
+        "gilroy-bold": "var(--font-gilroy-bold)",
+        "gilroy-regular": "var(--font-gilroy-regular)",
       },
     },
   },

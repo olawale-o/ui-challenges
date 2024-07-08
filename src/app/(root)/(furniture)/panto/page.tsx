@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import "./page.css";
 
 const whys = [
   {
@@ -57,6 +59,121 @@ const footerLinks = [
     links: ["Beds", "Chair", "All"],
   },
 ];
+
+const Header = () => {
+  return (
+    <header className="bg-transparent fixed top-0 left-0 right-0 w-full z-50">
+      <div className="flex justify-between mx-20 pt-10 items-center">
+        <Link
+          href="/"
+          className="text-white text-[28px] font-gilroy-bold font-normal tracking-[0.28px]"
+        >
+          Panto
+        </Link>
+        <div className="flex-grow ms-[335px] me-[355px] flex justify-between">
+          <Link
+            href="/"
+            className="text-white text-lg font-gilroyMedium font-normal"
+          >
+            Furniture
+          </Link>
+          <Link
+            href="/"
+            className="text-white text-lg font-gilroyMedium font-normal"
+          >
+            Shop
+          </Link>
+          <Link
+            href="/"
+            className="text-white text-lg font-gilroyMedium font-normal"
+          >
+            About us
+          </Link>
+          <Link
+            href="/"
+            className="text-white text-lg font-gilroyMedium font-normal"
+          >
+            Contact
+          </Link>
+        </div>
+        <button className="relative border-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+          >
+            <path
+              d="M17.007 2.83325C20.8036 2.83325 23.9249 5.81662 24.0833 9.59688H24.0463C24.0508 9.70676 24.0296 9.81618 23.9846 9.91659H24.2058C25.9299 9.91659 27.7353 11.1116 28.4592 13.9963L28.5378 14.3367L29.6271 23.1125C30.411 28.7097 27.3487 31.0636 23.1713 31.1633L22.8912 31.1666H11.1471C6.90168 31.1666 3.63027 29.6196 4.34956 23.4933L4.39861 23.1125L5.50041 14.3367C6.0437 11.2301 7.86761 10.0048 9.625 9.92121L9.81993 9.91659H9.93067C9.912 9.81083 9.912 9.70263 9.93067 9.59688C10.0891 5.81662 13.2104 2.83325 17.007 2.83325ZM12.8874 14.6331C12.1959 14.6331 11.6354 15.21 11.6354 15.9217C11.6354 16.6334 12.1959 17.2104 12.8874 17.2104C13.5789 17.2104 14.1394 16.6334 14.1394 15.9217L14.1297 15.7601C14.0524 15.1247 13.5257 14.6331 12.8874 14.6331ZM21.0882 14.6331C20.3968 14.6331 19.8362 15.21 19.8362 15.9217C19.8362 16.6334 20.3968 17.2104 21.0882 17.2104C21.7797 17.2104 22.3403 16.6334 22.3403 15.9217C22.3403 15.21 21.7797 14.6331 21.0882 14.6331ZM16.9515 4.6783C14.2257 4.6783 12.0159 6.88042 12.0159 9.59688C12.0346 9.70263 12.0346 9.81083 12.0159 9.91659H21.9487C21.9093 9.81451 21.8884 9.70625 21.887 9.59688C21.887 6.88042 19.6773 4.6783 16.9515 4.6783Z"
+              fill="white"
+              style={{ fill: "white", fillOpacity: 1 }}
+            />
+          </svg>
+          <div className="absolute -top-[10px] -right-[10px] bg-[#F57E00] w-6 h-6 rounded-full text-white">
+            0
+          </div>
+        </button>
+      </div>
+    </header>
+  );
+};
+
+const Hero = () => {
+  return (
+    <section>
+      <div className="h-[1048px] w-full bg relative">
+        <figure className="relative w-full h-full aspect-square">
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src={"/furniture/hero-panto.png"}
+              alt="hero"
+              fill
+              sizes="100ww"
+              className="absolute inset-0 block w-full h-full"
+            />
+          </div>
+        </figure>
+        <div className="absolute top-[161px] w-[861px] left-1/2 -translate-x-1/2">
+          <h1 className="-tracking-[0.8px] text-center text-white font-gilroy-bold text-[80px] leading-[104px] font-normal">
+            Make your interior more minimalistic & modern
+          </h1>
+        </div>
+        <div className="absolute top-[383px] left-1/2 -translate-x-1/2 w-[606px]">
+          <p className="text-white text-2xl font-gilroy-regular text-center leading-[38.4px] opacity-80">
+            Turn your room with panto into a lot more minimalist and modern with
+            ease and speed
+          </p>
+        </div>
+        <div className="flex items-center absolute h-[56px] border-[0.862px] border-white rounded-[42px] w-[344px] top-[504px] left-1/2 -translate-x-1/2 py-2 pe-2 pl-5">
+          <input
+            type="text"
+            className="bg-transparent outline-none text-white opacity-80 text-lg leading-[27px] font-gilroy-regular"
+            placeholder="Search furniture"
+          />
+
+          <div className="absolute top-2 right-2 z-50  rounded-3xl bg-[#F57E00] p-[11px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+            >
+              <path
+                d="M15.75 15.75L12.3855 12.3795M14.25 7.875C14.25 9.56576 13.5784 11.1873 12.3828 12.3828C11.1873 13.5784 9.56576 14.25 7.875 14.25C6.18424 14.25 4.56274 13.5784 3.36719 12.3828C2.17165 11.1873 1.5 9.56576 1.5 7.875C1.5 6.18424 2.17165 4.56274 3.36719 3.36719C4.56274 2.17165 6.18424 1.5 7.875 1.5C9.56576 1.5 11.1873 2.17165 12.3828 3.36719C13.5784 4.56274 14.25 6.18424 14.25 7.875Z"
+                stroke="white"
+                style={{ stroke: "white", strokeOpacity: 1 }}
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const WhyUs = () => {
   return (
@@ -601,6 +718,8 @@ const Footer = () => {
 export default function Panto() {
   return (
     <div>
+      <Header />
+      <Hero />
       <WhyUs />
       <ExperimentRentals />
       <ClientReviews />
