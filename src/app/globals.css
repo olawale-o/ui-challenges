@@ -77,6 +77,22 @@
     font-style: bold;
 }
 
+@font-face {
+    font-family: "Proxima-Nova";
+    src: url("../../public/fonts/proxima-nova/Fontspring-DEMO-proximanovaexcn-regular.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Proxima-Nova-Extrabold";
+    src: url("../../public/fonts/proxima-nova/Fontspring-DEMO-proximanova-extrabold.otf")
+        format("opentype");
+    font-weight: 800;
+    font-style: extrabold;
+}
+
 @layer base {
     :root {
         --font-metropolis: "Metropolis", sans-serif;
@@ -84,6 +100,8 @@
         --font-gilroy-medium: "Gilroy-Mediun", sans-serif;
         --font-gilroy-bold: "Gilroy-Bold", sans-serif;
         --font-gilroy-regular: "Gilroy-Regular", sans-serif;
+        --font-proxima-nova: "Proxima-Nova", sans-serif;
+        --font-proxima-nova-extrabold: "Proxima-Nova-Extrabold", sans-serif;
     }
 }
 
