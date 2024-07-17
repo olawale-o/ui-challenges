@@ -93,6 +93,22 @@
     font-style: extrabold;
 }
 
+@font-face {
+    font-family: "Century";
+    src: url("../../public/fonts/centurygothic/centurygothic.ttf")
+        format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Century";
+    src: url("../../public/fonts/centurygothic/centurygothic_bold.ttf")
+        format("truetype");
+    font-weight: 600;
+    font-style: bold;
+}
+
 @layer base {
     :root {
         --font-metropolis: "Metropolis", sans-serif;
@@ -102,6 +118,7 @@
         --font-gilroy-regular: "Gilroy-Regular", sans-serif;
         --font-proxima-nova: "Proxima-Nova", sans-serif;
         --font-proxima-nova-extrabold: "Proxima-Nova-Extrabold", sans-serif;
+        --font-century-gothic: "Century", sans-serif;
     }
 }
 
