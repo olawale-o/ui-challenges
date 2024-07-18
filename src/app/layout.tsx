@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, Livvic } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
+const livvic = Livvic({
+  variable: "--font-livvic",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${dmSans.className} ${livvic.className}`}>
+        {children}
+      </body>
     </html>
   );
 }

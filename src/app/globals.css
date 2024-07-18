@@ -109,6 +109,14 @@
     font-style: bold;
 }
 
+@font-face {
+    font-family: "Johnstown-Demo";
+    src: url("../../public/fonts/johnstown-demo/JohnstownDemoRegular.ttf")
+        format("truetype");
+    font-weight: 200;
+    font-style: regualar;
+}
+
 @layer base {
     :root {
         --font-metropolis: "Metropolis", sans-serif;
@@ -119,6 +127,7 @@
         --font-proxima-nova: "Proxima-Nova", sans-serif;
         --font-proxima-nova-extrabold: "Proxima-Nova-Extrabold", sans-serif;
         --font-century-gothic: "Century", sans-serif;
+        --font-johnstown: "Johnstown-Demo", sans-serif;
     }
 }
 

@@ -19,6 +19,7 @@ const config: Config = {
         "proxima-nova-extrabold": "var(--font-proxima-extrabold)",
         livvic: ["var(--font-livvic)"],
         "century-gothic": ["var(--font-century-gothic)"],
+        johnstown: ["var(--font-johnstown)"],
       },
     },
   },
