@@ -1,6 +1,117 @@
 import Link from "next/link";
 import "./page.css";
 
+const GetInTouchDetails = () => {
+  return (
+    <div className="col-span-1">
+      <div className="text-xl leading-[30px] text-white uppercase font-normal font-century-gothic">
+        contact now
+      </div>
+      <div className="mt-5">
+        <h3 className="font-livvic text-[50px] font-bold leading-normal text-white">
+          GET IN TOUCH
+        </h3>
+      </div>
+      <div className="mt-[45px]">
+        <div className="text-white font-century-gothic text-lg leading-[27px] font-normal">
+          Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse platea
+          dictumst. Duis porta,quam ut finibus ultrices.
+        </div>
+      </div>
+      <div className="mt-[50px] flex flex-col gap-10">
+        <div>
+          <span className="text-white">
+            <div className="font-century-gothic text-sm leading-[30px] font-normal">
+              PHONE
+            </div>
+            <div className="text-[20px] font-livvic leading-[27px] font-medium mt-[7px]">
+              +880123456789
+            </div>
+            <div className="text-[20px] font-livvic leading-[27px] font-medium mt-[7px]">
+              +880987654321
+            </div>
+          </span>
+        </div>
+        <div>
+          <span className="text-white">
+            <div className="font-century-gothic text-sm leading-[30px] font-normal mt-[7px]">
+              EMAIL
+            </div>
+            <div className="text-[20px] font-livvic leading-[27px] font-medium mt-[7px]">
+              needhelp@company.com
+            </div>
+          </span>
+        </div>
+        <div>
+          <span className="text-white">
+            <div>ADDRESS</div>
+            <div className="text-[20px] font-livvic leading-[27px] font-medium mt-[7px]">
+              Road No. 8, Niketan, Dhaka, Bangladesh
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const GetInTouchForm = () => {
+  return (
+    <div className="col-span-1 flex flex-col gap-[30px]">
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="py-[25px] px-[22px] w-full focus:outline-none bg-[#263C28] rounded-[10px] text-white"
+        />
+      </div>
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Phone Number"
+          className="py-[25px] px-[22px] w-full focus:outline-none bg-[#263C28] rounded-[10px] text-white"
+        />
+      </div>
+      <div className="relative">
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="py-[25px] px-[22px] w-full focus:outline-none bg-[#263C28] rounded-[10px] text-white"
+        />
+      </div>
+      <div className="relative">
+        <textarea
+          placeholder="Your Message"
+          className="resize-none h-[184px] py-[25px] px-[22px] w-full focus:outline-none bg-[#263C28] rounded-[10px] text-white"
+        />
+      </div>
+      <button
+        type="button"
+        className="self-start py-[25px] px-[50px] rounded-[20px] bg-[#F7C35F] text-[#1a1a1a] text-[15px] font-livvic font-medium"
+      >
+        SEND MESSAGE
+      </button>
+    </div>
+  );
+};
+
+const GetInTouch = () => {
+  return (
+    <section>
+      <div className="bg-[#334B35]">
+        <div className="py-[100px]">
+          <div className="max-w-[1200px] mx-auto">
+            <div className="grid grid-cols-2 gap-[133px]">
+              <GetInTouchDetails />
+              <GetInTouchForm />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const WeAreLeaders = () => {
   return (
     <section>
@@ -285,9 +396,11 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default function Page() {
   return (
     <div>
+      <GetInTouch />
       <WeAreLeaders />
       <Footer />
     </div>
