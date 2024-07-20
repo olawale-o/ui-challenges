@@ -1,6 +1,125 @@
 import Link from "next/link";
 import "./page.css";
 
+const News = [
+  {
+    id: 1,
+    author: "Kevin Martin",
+    title: "Taking seamless key indicators offline to",
+    comment: 2,
+    date: "3 Sep, 2003",
+    asset: "/farm/tractor.png",
+  },
+  {
+    id: 2,
+    author: "Kevin Martin",
+    title: "Override the digital divide with additional",
+    comment: 5,
+    date: "3 Sep, 2003",
+    asset: "/farm/cattle.png",
+  },
+  {
+    id: 3,
+    author: "Kevin Martin",
+    title: "Agriculture Matters to the Future of next",
+    comment: 1,
+    date: "3 Sep, 2003",
+    asset: "/farm/farm_lab.png",
+  },
+];
+
+const NewsArticles = () => {
+  return (
+    <section>
+      <div className="relative bg-[#263C28]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="pt-[100px]">
+            <div className="text-center">
+              <div className="font-century-gothic font-normal uppercase leading-[30px] text-xl text-white">
+                FROM THE BLOG
+              </div>
+              <div className="mt-5">
+                <h3 className="font-livvic text-white text-[50px] font-bold">
+                  News & Articles
+                </h3>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-[30px] mt-[100px] relative z-20">
+              {News.map((item) => (
+                <div className="col-span-1 " key={item.id}>
+                  <div className="bg-red-900">
+                    <figure className="relative w-full h-[364px] rounded-tl-[10px] rounded-tr-[10px]">
+                      <div className="absolute inset-0 w-full h-full rounded-tl-[10px] rounded-tr-[10px]">
+                        <img
+                          src={item.asset}
+                          alt="tractor"
+                          className="absolute inset-0 w-full h-full object-cover rounded-tl-[10px] rounded-tr-[10px]"
+                        />
+                      </div>
+                    </figure>
+                  </div>
+                  <div className="p-5 bg-[#2D442F] rounded-bl-[10px] rounded-br-[10px]">
+                    <div className="flex gap-5">
+                      <div className="flex gap-[7px]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M17.1066 17.5V15.8333C17.1066 14.9493 16.7554 14.1014 16.1303 13.4763C15.5052 12.8512 14.6573 12.5 13.7733 12.5H7.10661C6.22255 12.5 5.37471 12.8512 4.74958 13.4763C4.12446 14.1014 3.77327 14.9493 3.77327 15.8333V17.5"
+                            stroke="#F7C35F"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M10.4399 9.16667C12.2809 9.16667 13.7733 7.67428 13.7733 5.83333C13.7733 3.99238 12.2809 2.5 10.4399 2.5C8.59899 2.5 7.10661 3.99238 7.10661 5.83333C7.10661 7.67428 8.59899 9.16667 10.4399 9.16667Z"
+                            stroke="#F7C35F"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        <span className="text-white text-sm font-normal leading-normal">
+                          {item.comment} comments
+                        </span>
+                      </div>
+                      <div className="flex gap-[7px]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M17.9399 9.58336C17.9428 10.6832 17.6858 11.7683 17.1899 12.75C16.602 13.9265 15.6981 14.916 14.5795 15.6078C13.4609 16.2995 12.1718 16.6662 10.8566 16.6667C9.75672 16.6696 8.6717 16.4126 7.68994 15.9167L2.93994 17.5L4.52327 12.75C4.02738 11.7683 3.77041 10.6832 3.77327 9.58336C3.77378 8.26815 4.14045 6.97907 4.83221 5.86048C5.52396 4.7419 6.51349 3.838 7.68994 3.25002C8.6717 2.75413 9.75672 2.49716 10.8566 2.50002H11.2733C13.0102 2.59585 14.6508 3.32899 15.8809 4.55907C17.111 5.78915 17.8441 7.42973 17.9399 9.16669V9.58336Z"
+                            stroke="#F7C35F"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        <span className="text-white text-sm font-normal leading-normal">
+                          by {item.author}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="mt-[21.5px] font-livvic text-2xl font-bold text-white leading-normal">
+                      {item.title}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="w-full absolute z-10 -bottom-px bg-[#334B35] h-[354px]"></div>
+      </div>
+    </section>
+  );
+};
+
 const GetInTouchDetails = () => {
   return (
     <div className="col-span-1">
@@ -128,7 +247,7 @@ const WeAreLeaders = () => {
                     viewBox="0 0 50 51"
                     fill="none"
                   >
-                    <g clip-path="url(#clip0_3_571)">
+                    <g clipPath="url(#clip0_3_571)">
                       <path
                         d="M49.581 46.1491L46.027 43.6538C45.7247 43.4417 45.3335 43.4156 45.0059 43.5859C44.6782 43.7562 44.4747 44.0913 44.4747 44.4606V46.2225H37.3056V36.4226H38.1662C41.1703 36.4226 43.6143 33.9787 43.6143 30.9746V30.7032C43.6143 29.8092 42.8868 29.0817 41.9928 29.0817H41.2867C39.7168 29.0817 38.3007 29.7501 37.3056 30.8161V24.0586H39.4166C43.0145 24.0586 45.9417 21.1315 45.9417 17.5336C45.9417 16.8326 45.3714 16.2622 44.6704 16.2622H41.8259C41.7929 16.2622 41.7601 16.2632 41.7274 16.2643L41.6924 16.2653C41.2874 16.2741 40.9663 16.6097 40.9752 17.0147C40.9841 17.4196 41.3186 17.7436 41.7245 17.7319L41.7769 17.7303C41.7933 17.7298 41.8095 17.7291 41.8259 17.7291H44.471C44.3677 20.4278 42.1402 22.5916 39.4166 22.5916H37.3056V22.2494C37.3056 20.8546 37.9362 19.559 39.0359 18.6945C39.3544 18.4442 39.4096 17.9831 39.1593 17.6645C38.909 17.346 38.4478 17.2909 38.1294 17.5412C37.3401 18.1617 36.7351 18.9512 36.345 19.8377C35.5669 18.8892 34.3864 18.2827 33.0667 18.2827H31.7165C30.8691 18.2827 30.1797 18.9721 30.1797 19.8195C30.1797 22.1569 32.0813 24.0585 34.4186 24.0585H35.8388V34.5297V35.689V46.2223H30.9794C30.5742 46.2223 30.2459 46.5507 30.2459 46.9557C30.2459 47.3608 30.5742 47.6892 30.9794 47.6892H44.4748V49.4511C44.4748 49.8203 44.6783 50.1556 45.006 50.3259C45.1498 50.4006 45.3057 50.4375 45.4611 50.4375C45.6598 50.4375 45.8576 50.3771 46.0271 50.258L49.5811 47.7627C49.8438 47.5783 50.0005 47.2766 50.0005 46.9558C50.0004 46.6352 49.8436 46.3336 49.581 46.1491ZM31.6467 19.8197C31.6467 19.7812 31.678 19.7499 31.7165 19.7499H33.0667C34.5952 19.7499 35.8388 20.9934 35.8388 22.5219V22.5918H34.4186C32.8902 22.5918 31.6467 21.3483 31.6467 19.8197ZM41.2867 30.5488H41.9928C42.078 30.5488 42.1473 30.618 42.1473 30.7033V30.9747C42.1473 33.1699 40.3614 34.9558 38.1662 34.9558H37.3056V34.53C37.3056 32.3347 39.0915 30.5488 41.2867 30.5488ZM45.9417 48.5257V45.3864L48.1772 46.956L45.9417 48.5257Z"
                         fill="#F7C35F"
@@ -400,6 +519,7 @@ const Footer = () => {
 export default function Page() {
   return (
     <div>
+      <NewsArticles />
       <GetInTouch />
       <WeAreLeaders />
       <Footer />
