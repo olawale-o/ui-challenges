@@ -28,6 +28,37 @@ const News = [
   },
 ];
 
+const NavLinks = [
+  {
+    id: 1,
+    text: "Home",
+  },
+  {
+    id: 2,
+    text: "About Us",
+  },
+  {
+    id: 3,
+    text: "Our Products",
+  },
+  {
+    id: 4,
+    text: "Projects",
+  },
+  {
+    id: 5,
+    text: "Services",
+  },
+  {
+    id: 6,
+    text: "News",
+  },
+  {
+    id: 7,
+    text: "Contact Us",
+  },
+];
+
 const Header = () => {
   return (
     <header className="bg-[#334B35] fixed top-0 left-0 right-0 z-50">
@@ -85,48 +116,15 @@ const Header = () => {
               </svg>
             </Link>
             <div className="flex ml-auto justify-between w-[839px]">
-              <Link
-                href="/"
-                className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
-              >
-                Home
-              </Link>
-              <Link
-                href="/"
-                className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/"
-                className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
-              >
-                Our Products
-              </Link>
-              <Link
-                href="/"
-                className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/"
-                className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
-              >
-                Services
-              </Link>
-              <Link
-                href="/"
-                className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
-              >
-                News
-              </Link>
-              <Link
-                href="/"
-                className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
-              >
-                Contact Us
-              </Link>
+              {NavLinks.map((link) => (
+                <Link
+                  key={link.id}
+                  href="/"
+                  className="text-white font-century-gothic text-lg font-medium leading-[30px] hover:font-bold hover:underline decoration-[#F7C35F]"
+                >
+                  {link.text}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

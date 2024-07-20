@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 
 const livvic = Livvic({
   variable: "--font-livvic",
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
