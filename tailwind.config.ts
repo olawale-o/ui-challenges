@@ -21,6 +21,8 @@ const config: Config = {
         "century-gothic": ["var(--font-century-gothic)"],
         johnstown: ["var(--font-johnstown)"],
         dancing: ["var(--font-dancing)"],
+        inter: ["var(--font-inter)"],
+        pjs: ["var(--font-pjs)"],
       },
     },
   },
