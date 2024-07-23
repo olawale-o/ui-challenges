@@ -1,5 +1,7 @@
 import { DM_Sans } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
+import "./page.css";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -33,6 +35,438 @@ const FooterLinks = [
   },
 ];
 
+const blogs = [
+  {
+    id: 1,
+    title: "6 Strategies to Find Your Conference Keynote and Other Speakers",
+    text: "Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.",
+    assets: "/ticket/blog_1.png",
+  },
+  {
+    id: 2,
+    title:
+      "How Successfully Used Paid Marketing to Drive Incremental Ticket Sales",
+    text: "Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.",
+    assets: "/ticket/blog_2.png",
+  },
+  {
+    id: 3,
+    title:
+      "Introducing Workspaces: Work smarter, not harder with new navigation",
+    text: "Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.",
+    assets: "/ticket/blog_1.png",
+  },
+];
+
+const brands = [
+  { assets: "spotify.png", w: 167.702, h: 50.311 },
+  { assets: "google.png", w: 151.847, h: 49.058 },
+  { assets: "stripe.png", w: 132.526, h: 62.95 },
+  { assets: "youtube.png", w: 212, h: 131.016 },
+  { assets: "microsoft.png", w: 277.636, h: 124.438 },
+  { assets: "medium.png", w: 275.704, h: 83 },
+  { assets: "zoom.png", w: 170, h: 38.636 },
+  { assets: "uber.png", w: 125.48, h: 44.022 },
+  { assets: "grab.png", w: 136, h: 52.36 },
+];
+
+const navLinks = ["Schedule", "Speakers", "Ticket", "Contact"];
+
+const Header = () => {
+  return (
+    <header className="bg-transparent fixed inset-x-0 top-0 w-full z-50 p-[34px]">
+      <div className="max-w-[1200px] mx-auto">
+        <nav className="flex items-center justify-between">
+          <Link href="/">
+            <div className="flex gap-x-[8.31px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 35 35"
+                fill="none"
+              >
+                <path
+                  d="M24.6697 7.11704C24.6697 7.13139 24.6697 7.13139 24.6697 7.14574C24.311 7.13139 23.9522 7.11704 23.5648 7.11704H12.5161L14.0514 5.59605C15.4576 4.17551 17.0073 2.86975 18.801 2.86975C20.6089 2.86975 22.1586 4.17551 23.5648 5.59605L24.3683 6.39959C24.5692 6.58613 24.6697 6.84441 24.6697 7.11704Z"
+                  fill="white"
+                />
+                <path
+                  d="M29.9045 18.8965C30.4641 18.8965 30.9089 18.4373 30.9089 17.8634V16.6007C30.9089 10.9616 29.1871 9.25403 23.5623 9.25403H14.5224H10.8779C5.25306 9.25403 3.53119 10.9759 3.53119 16.6007V17.2177C3.53119 17.7916 3.97601 18.2364 4.53562 18.2364C5.74093 18.2364 6.70231 19.2122 6.70231 20.4031C6.70231 21.5941 5.74093 22.5842 4.53562 22.5842C3.97601 22.5842 3.53119 23.029 3.53119 23.603V24.22C3.53119 29.8591 5.25306 31.5666 10.8779 31.5666H14.5081H23.5479C29.1727 31.5666 30.8946 29.8448 30.8946 24.22C30.8946 23.6604 30.4498 23.2012 29.8902 23.2012C28.6849 23.2012 27.7235 22.2398 27.7235 21.0488C27.7378 19.8579 28.6992 18.8965 29.9045 18.8965ZM15.5269 27.0611C15.5269 27.6207 15.0677 28.0798 14.5081 28.0798C13.9485 28.0798 13.4894 27.6207 13.4894 27.0611V23.2155C13.4894 22.6559 13.9485 22.1968 14.5081 22.1968C15.0677 22.1968 15.5269 22.6559 15.5269 23.2155V27.0611ZM15.5269 17.6051C15.5269 18.1647 15.0677 18.6239 14.5081 18.6239C13.9485 18.6239 13.4894 18.1647 13.4894 17.6051V13.7596C13.4894 13.2 13.9485 12.7408 14.5081 12.7408C15.0677 12.7408 15.5269 13.2 15.5269 13.7596V17.6051Z"
+                  fill="white"
+                />
+              </svg>
+              <div className="text-[28.5px]">
+                <span className="font-proxima-nova-extrabold font-extrabold text-white">
+                  Event
+                </span>
+                <span className="font-proxima-nova text-white font-normal">
+                  ick
+                </span>
+              </div>
+            </div>
+          </Link>
+          <div className="flex ml-[418px] flex-grow justify-between items-center">
+            {navLinks.map((navLink, i: number) => (
+              <Link
+                href="/"
+                key={i}
+                className={`${dmSans.className} text-white text-base font-normal`}
+              >
+                {navLink}
+              </Link>
+            ))}
+            <Link
+              href="/"
+              role="button"
+              className="rounded-[50px] border-solid border-[1.5px] border-white py-2.5 px-5 text-white"
+            >
+              Login
+            </Link>
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+const Hero = () => {
+  return (
+    <section>
+      <div className="h-[720px] bg-cover relative">
+        <div className="absolute inset-0 bg">
+          <div className="max-w-[1200px] mx-auto">
+            <div className="flex items-center mt-[161px] mb-[83px] gap-x-[42.16px] w-full mx-auto">
+              <div className="basis-[636.836px] h-[476px]">
+                <figure className="relative aspect-square w-full h-full overflow-hidden">
+                  <div className="absolute inset-0 w-full h-full">
+                    <Image
+                      src="/ticket/eventick-all.png"
+                      className="block object-cover inset-0 absolute w-full h-full"
+                      alt=""
+                      sizes="100vw"
+                      fill
+                    />
+                  </div>
+                </figure>
+              </div>
+              <div className="basis-[443px] mt-[57px] self-stretch">
+                <div>
+                  <h1 className="text-white font-proxima-nova text-[40px] font-bold">
+                    SBS MTV The Kpop Show Ticket Package
+                  </h1>
+                  <div className="mt-[26px]">
+                    <div className="text-white font-proxima-nova text-lg leading-[23.4px] font-normal">
+                      Look no further! Our SBS The Show tickets are the simplest
+                      way for you to experience a live Kpop recording.
+                    </div>
+                  </div>
+                  <div className="mt-[30px] flex gap-x-5">
+                    <button
+                      type="button"
+                      className={`${dmSans.className} bg-[#F5167E] rounded-[50px] shadow-[0_10px_50px_0_rgba(61,55,241,0.25)] w-[182px] h-[60px] text-lg font-bold text-white`}
+                    >
+                      Get Ticket
+                    </button>
+                    <button
+                      type="button"
+                      className={`${dmSans.className}  rounded-[50px] shadow-[0_10px_50px_0_rgba(61,55,241,0.25)] w-[182px] h-[60px] text-lg font-bold text-white border-[1.5px] border-solid`}
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const FilterText = ({
+  fieldName,
+  peerName,
+  peerFocusClass,
+}: {
+  fieldName: string;
+  peerName: string;
+  peerFocusClass: string;
+}) => {
+  return (
+    <div className="field relative flex-1">
+      <label
+        htmlFor={fieldName}
+        className={`text-white whitespace-nowrap text-ellipsis overflow-hidden pointer-events-none absolute top-1/2 text-base font-normal ${dmSans.className} h-px w-px border-0 inset-0 p-0`}
+      >
+        {fieldName}
+      </label>
+      <input
+        type="text"
+        id={fieldName}
+        value=""
+        className={`border-b-[1px] border-solid border-[#7778B0] ${dmSans.className} bg-[#242565] text-[22px] font-bold focus:outline-none ${peerName}`}
+      />
+      <div
+        className={`duration-150 text-white whitespace-nowrap text-ellipsis overflow-hidden pointer-events-none absolute top-[calc(50%-25px)] translate-y-1/2 text-base font-normal ${dmSans.className} ${peerFocusClass} `}
+      >
+        {fieldName}
+      </div>
+    </div>
+  );
+};
+
+const AnyDateDropDown = ({ fieldName }: { fieldName: string }) => {
+  return (
+    <div className="field relative flex-1">
+      <label
+        htmlFor="anydate"
+        className={`calc(100%-25px) text-[#1D275F] text-sm font-medium ${dmSans.className} whitespace-nowrap text-ellipsis overflow-hidden absolute h-px w-px border-0 -mx-px p-0`}
+      >
+        {fieldName}
+      </label>
+      <select
+        className={`cursor-auto appearance-none text-white bg-[#242565] w-full text-base ${dmSans.className} border-b-[1px] border-solid border-[#7778B0]`}
+        name="weekdays"
+        id="anydate"
+      >
+        <option value="anydate">Any Date</option>
+      </select>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="8"
+        viewBox="0 0 12 8"
+        fill="none"
+        className="box-content w-[10px] absolute right-0 top-1/2 -translate-x-1/2 mx-[25px]"
+      >
+        <path
+          d="M1 1.5L6 6.5L11 1.5"
+          stroke="#ffffff"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      <div
+        className={`duration-150 text-white whitespace-nowrap text-ellipsis overflow-hidden pointer-events-none absolute top-0 -translate-y-1/2 text-base font-normal ${dmSans.className} `}
+      >
+        {fieldName}
+      </div>
+    </div>
+  );
+};
+
+const Filter = () => {
+  return (
+    <div className="relative -top-[50px] z-[20]">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="bg-[#242565] shadow-[0_10px_50px_0_rgba(61,55,241,0.25)] pt-[30px] pb-[45px] px-12 rounded-[20px]">
+          <div className="flex justify-between items-center">
+            <FilterText
+              fieldName="Search Event"
+              peerName="peer/event"
+              peerFocusClass="peer-focus/event:-top-0 peer-focus/event:-translate-y-1/2"
+            />
+            <FilterText
+              fieldName="Place"
+              peerName="peer/place"
+              peerFocusClass="peer-focus/place:-top-0 peer-focus/place:-translate-y-1/2"
+            />
+            <AnyDateDropDown fieldName="Time" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const UpcommingEvent = () => (
+  <div className="col-span-1">
+    <div className="card relative bg-white ">
+      <div className="">
+        <figure className="relative aspect-[16/9] w-full rounded-t-[20px] overflow-hidden">
+          <div className="absolute inset-0 h-full w-full rounded-t-[20px]">
+            <Image
+              src="/ticket/event_1.png"
+              className="absolute block w-full h-full object-cover rounded-t-[20px]"
+              alt=""
+              sizes="100vw"
+              fill
+            />
+          </div>
+        </figure>
+        <div className="flex mt-5 gap-x-[12.5px]">
+          <span>
+            <div
+              className={`${dmSans.className} text-[#3D37F1] text-[11.372px] font-bold`}
+            >
+              AUG
+            </div>
+            <div
+              className={`${dmSans.className} text-[#000] font-bold text-[28.429px]`}
+            >
+              20
+            </div>
+          </span>
+
+          <div>
+            <div className="rounded-bl-[18.953px] rounded-br-[18.953px] bg-white">
+              <h3
+                className={`${dmSans.className} leading-6 font-bold text-black text-base`}
+              >
+                Wonder Girls 2010 Wonder Girls World Tour San Francisco
+              </h3>
+            </div>
+            <div className="mt-5">
+              <div
+                className={`${dmSans.className} text-sm text-[6a6a6a] font-normal leading-[21px]`}
+              >
+                We{`’`}ll get you directly seated and inside for you to enjoy
+                the show.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Link
+        href="/"
+        className="no-underline absolute inset-0 bg-transparent block z-10 outline-none w-full h-full overflow-hidden"
+      >
+        <span className="h-px border-0 w-px -m-px overflow-hidden absolute inset-0">
+          upcomming events
+        </span>
+      </Link>
+    </div>
+  </div>
+);
+
+const DropDown = ({ fieldName }: { fieldName: string }) => {
+  return (
+    <div>
+      <div className="relative overflow-auto">
+        <label
+          htmlFor="weekdays"
+          className={`calc(100%-25px) text-[#1D275F] text-sm font-medium ${dmSans.className} whitespace-nowrap text-ellipsis overflow-hidden absolute h-px w-px border-0 -mx-px p-0`}
+        >
+          {fieldName}
+        </label>
+        <select
+          className={`py-3.5 h-[46px] bg-[#F2F4FF] rounded-[50px] cursor-auto appearance-none text-[#1D275F] ps-[25px] pe-[25px] w-[168px] text-sm ${dmSans.className}`}
+          name="weekdays"
+          id="weekdays"
+        >
+          <option value="Weekdays">{fieldName}</option>
+        </select>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="8"
+          viewBox="0 0 12 8"
+          fill="none"
+          className="box-content w-[10px] absolute right-0 top-1/2 -translate-x-1/2 mx-[25px]"
+        >
+          <path
+            d="M1 1.5L6 6.5L11 1.5"
+            stroke="#1D275F"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        {/* <div
+          className={`calc(100%-25px) text-[#1D275F] text-sm font-medium ${dmSans.className} whitespace-nowrap text-ellipsis overflow-hidden absolute`}
+        >
+          Weekdays
+        </div> */}
+      </div>
+    </div>
+  );
+};
+
+const UpcommingEvents = () => {
+  return (
+    <section className="px-[174px]">
+      <div className="max-w-[1220px] mx-auto mt-[106px]">
+        <div className="flex justify-between">
+          <h2
+            className={`font-proxima-nova text-[40px] font-bold text-[#242565] text-center`}
+          >
+            Upcoming Events
+          </h2>
+          <div className="flex gap-x-5">
+            <DropDown fieldName="Weekdays" />
+            <DropDown fieldName="EventType" />
+            <DropDown fieldName="Any Category" />
+          </div>
+        </div>
+        <div className="mt-[47px]">
+          <div className="grid grid-cols-3 gap-[28px]">
+            {Array.from([1, 2, 3, 4, 5, 6], (x) => x).map((blog) => (
+              <UpcommingEvent key={blog} />
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center justify-center mt-[50px]">
+          <Link
+            href="/"
+            role="button"
+            className={`border-[1.5px] rounded-[50px] border-solid border-[#3D37F1] shadow-[0_10px_50px_0_rgba(61,55,241,0.25)] h-[60px] w-[182px] inline-flex items-center justify-center ${dmSans.className} text-[#3D37F1] text-lg font-bold`}
+          >
+            Load More
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const MakeYourOwnEvent = () => {
+  return (
+    <section>
+      <div className="relative bg-teal-900">
+        <div className="h-[303px] relative bg-rose-800">
+          <div className="grid grid-cols-[554px_1fr] bg-[#EEE1FF] h-[252px] absolute bottom-0 left-0 right-0">
+            <div className="col-span-[554px]">
+              <figure className="relative left-0 top-0 w-full h-full aspect-[16/9]">
+                <div className="absolute inset-0 f-full w-full">
+                  <Image
+                    className="absolute block w-full h-full object-cover"
+                    src="/ticket/2-people.svg"
+                    alt="Create your own events"
+                    sizes="100vw"
+                    fill
+                  />
+                </div>
+              </figure>
+            </div>
+            <div className="bg-yellow-50 col-span-1 ml-[51px]">
+              <h3
+                className={`${dmSans.className} text-black text-[34px] font-bold`}
+              >
+                Make your own Event
+              </h3>
+              <div>
+                <div
+                  className={`${dmSans.className} text-[#272727] text-lg font-normal`}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                </div>
+              </div>
+              <button
+                type="button"
+                className={`${dmSans.className} h-[60px] w-[302px] rounded-[50px] bg-[#F5167E] shadow-[0px_10px_50px_0px_rgba(61,55,241,0.25)] text-white text-lg fony-bold`}
+              >
+                Create Events
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const FooterLink = ({ footerLink }: { footerLink: any }) => {
   return (
     <li className="first:mr-[84px]">
@@ -54,6 +488,7 @@ const FooterLink = ({ footerLink }: { footerLink: any }) => {
     </li>
   );
 };
+
 const FooterSubscribe = () => {
   return (
     <div className="mt-5">
@@ -74,9 +509,138 @@ const FooterSubscribe = () => {
   );
 };
 
+const BlogItem = ({ blog }: { blog: any }) => (
+  <div className="col-span-1">
+    <div className="card relative">
+      <div className="">
+        <figure className="relative aspect-square w-full rounded-[20px] overflow-hidden">
+          <div className="absolute inset-0 h-full w-full rounded-[20px]">
+            <Image
+              src={blog.assets}
+              className="absolute block w-full h-full object-cover rounded-[20px]"
+              alt={blog.title}
+              sizes="100vw"
+              fill
+            />
+          </div>
+        </figure>
+        <div className="mt-5">
+          <h3
+            className={`${dmSans.className} leading-[30px] font-bold text-[#242565] text-[20px]`}
+          >
+            {blog.title}
+          </h3>
+        </div>
+        <div className="mt-5">
+          <div
+            className={`${dmSans.className} text-base text-black font-[450] leading-6`}
+          >
+            {blog.text}
+          </div>
+        </div>
+        <div className="mt-5">
+          <div
+            className={`${dmSans.className} text-sm font-[450] leading-[21px] text-[#a5a5a5]`}
+          >
+            12 Mar - Jhon Doe
+          </div>
+        </div>
+      </div>
+      <Link
+        href="/"
+        className="no-underline absolute inset-0 bg-transparent block z-10 outline-none w-full h-full overflow-hidden"
+      >
+        <span className="h-px border-0 w-px -m-px overflow-hidden absolute inset-0">
+          {blog.title}
+        </span>
+      </Link>
+    </div>
+  </div>
+);
+
+const Brands = () => {
+  return (
+    <section>
+      <div className="max-w-[1200px] mx-auto px-[159px]">
+        <div>
+          <h2
+            className={`font-proxima-nova text-[40px] font-bold text-[#242565] text-center`}
+          >
+            Join these brands
+          </h2>
+          <div className="mt-5">
+            <div
+              className={`${dmSans.className} leading-[27px] text-center text-[#6A6A6A] text-lg`}
+            >
+              We{`'`}ve had the pleasure of working with industry-defining
+              brands. These are just some of them.
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center flex-wrap">
+          {brands.map((brand, i) => (
+            <div key={i} className="w-[calc(100%/5)]">
+              <figure className="relative aspect-square overflow-hidden h-full">
+                <div className="absolute inset-0 h-full">
+                  <Image
+                    src={`/ticket/${brand.assets}`}
+                    className="object-contain absolute h-full block"
+                    alt="brand"
+                    sizes="100vw"
+                    fill
+                  />
+                </div>
+              </figure>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Blog = () => {
+  return (
+    <section className="px-[174px]">
+      <div className="max-w-[1220px] mx-auto ">
+        <div>
+          <h2
+            className={`font-proxima-nova text-[40px] font-bold text-[#242565] text-center`}
+          >
+            Blogs
+          </h2>
+          <div className="mt-5">
+            <div
+              className={`${dmSans.className} leading-[27px] text-center text-[#6A6A6A] text-lg`}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+            </div>
+          </div>
+        </div>
+        <div className="mt-[47px]">
+          <div className="grid grid-cols-3 gap-x-[28px]">
+            {blogs.map((blog) => (
+              <BlogItem key={blog.id} blog={blog} />
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center justify-center mt-[50px]">
+          <Link
+            href="/"
+            role="button"
+            className={`border-[1.5px] rounded-[50px] border-solid border-[#3D37F1] shadow-[0_10px_50px_0_rgba(61,55,241,0.25)] h-[60px] w-[182px] inline-flex items-center justify-center ${dmSans.className} text-[#3D37F1] text-lg font-bold`}
+          >
+            Load More
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => {
   return (
-    <footer className="bg-[#0A075F] h-[430px]">
+    <footer className="bg-[#0A075F] h-[430px] mt-10">
       <div className="max-w-[1220px] mx-auto pt-[56px] h-full">
         <div className="flex flex-col h-full">
           <div className="flex">
@@ -233,6 +797,12 @@ const Footer = () => {
 export default function EventTick() {
   return (
     <div>
+      <Header />
+      <Hero />
+      <Filter />
+      <UpcommingEvents />
+      <Brands />
+      <Blog />
       <Footer />
     </div>
   );

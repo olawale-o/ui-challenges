@@ -1,0 +1,12 @@
+.bg-cover {
+    background-image: url("/ticket/eventick-bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.bg {
+    opacity: 0.9;
+    background-image: linear-gradient(119deg, #ed4690 -2.11%, #52c 63.58%);
+    background-repeat: no-repeat;
+}
