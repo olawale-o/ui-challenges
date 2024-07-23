@@ -103,8 +103,8 @@ const footerLinks = [
   },
 ];
 
-const prefixDash = () => {
-  return <div className="h-4px w-16 bg-[#A4074D]"></div>;
+const PrefixDash = () => {
+  return <div className="h-1 w-16 bg-[#A4074D]"></div>;
 };
 
 const Button = ({
@@ -142,6 +142,177 @@ const Button = ({
     >
       {title}
     </button>
+  );
+};
+
+const Blog = () => {
+  return (
+    <section>
+      <div className="p-5 xl:p-10 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center">
+            <div className="flex gap-6 items-center justify-center">
+              <PrefixDash />
+              <div className="text-2xl text-[#1A2434] leading-[28.8px] font-normal font-inter">
+                Blog
+              </div>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-pjs text-4xl font-semibold text-[#1A2434] semi-bold leading-[43.2px]">
+                Browse Articles
+              </h2>
+            </div>
+          </div>
+          <div className="mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {articles.map((article) => (
+                <div className="col-span-1" key={article.id}>
+                  <div className="p-1 md:p-3 xl:p-6 rounded-[32px] border-solid border-[1px] border-[#EBEFF6]">
+                    <div className="">
+                      <figure className="relative w-full aspect-[2/1] md:aspect-square rounded-[32px]">
+                        <img
+                          src={article.assets}
+                          alt="Picture"
+                          className="absolute inset-0 w-full h-full object-cover block rounded-[32px]"
+                        />
+                      </figure>
+                      <div className="mt-6">
+                        <div className="flex justify-between">
+                          <div className="flex items-center gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="17"
+                              height="17"
+                              viewBox="0 0 17 17"
+                              fill="none"
+                            >
+                              <g clipPath="url(#clip0_34_2310)">
+                                <path
+                                  d="M8.5 10.625C10.8472 10.625 12.75 8.72221 12.75 6.375C12.75 4.02779 10.8472 2.125 8.5 2.125C6.15279 2.125 4.25 4.02779 4.25 6.375C4.25 8.72221 6.15279 10.625 8.5 10.625Z"
+                                  stroke="#1A2434"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M2.125 14.3438C3.41129 12.1211 5.74746 10.625 8.5 10.625C11.2525 10.625 13.5887 12.1211 14.875 14.3438"
+                                  stroke="#1A2434"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_34_2310">
+                                  <rect width="17" height="17" fill="white" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                            <span>Tom Kennedy</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="17"
+                              viewBox="0 0 18 17"
+                              fill="none"
+                            >
+                              <g clipPath="url(#clip0_34_2300)">
+                                <path
+                                  d="M14.4791 2.65625H3.85413C3.56072 2.65625 3.32288 2.8941 3.32288 3.1875V13.8125C3.32288 14.1059 3.56072 14.3438 3.85413 14.3438H14.4791C14.7725 14.3438 15.0104 14.1059 15.0104 13.8125V3.1875C15.0104 2.8941 14.7725 2.65625 14.4791 2.65625Z"
+                                  stroke="#1A2434"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M12.3541 1.59375V3.71875"
+                                  stroke="#1A2434"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M5.97913 1.59375V3.71875"
+                                  stroke="#1A2434"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M3.32288 5.84375H15.0104"
+                                  stroke="#1A2434"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_34_2300">
+                                  <rect
+                                    width="17"
+                                    height="17"
+                                    fill="white"
+                                    transform="translate(0.666626)"
+                                  />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                            <span>{article.date}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-6">
+                        <div className="text-[#1A2434] font-pjs text-base xl:text-2xl font-semibold leading-[33.6px]">
+                          Lorem ipsum dolor sit amet consectetur.
+                        </div>
+                      </div>
+                      <div className="mt-6">
+                        <Link
+                          href="/"
+                          className="text-[#1A2434] font-inter text-base xl:text-xl font-bold leading-6 flex justify-center items-center gap-4"
+                        >
+                          Read more
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="24"
+                            viewBox="0 0 25 24"
+                            fill="none"
+                          >
+                            <g opacity="0.8" clip-path="url(#clip0_24_1741)">
+                              <path
+                                d="M4.08337 12H20.5834"
+                                stroke="#1A2434"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                              <path
+                                d="M13.8334 5.25L20.5834 12L13.8334 18.75"
+                                stroke="#1A2434"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_24_1741">
+                                <rect
+                                  width="24"
+                                  height="24"
+                                  fill="white"
+                                  transform="translate(0.333374)"
+                                />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -393,6 +564,7 @@ export default function Digilearn() {
   return (
     <div>
       <div className="max-w-[1440px] mx-auto">
+        <Blog />
         <Newsletter />
         <Footer />
       </div>
