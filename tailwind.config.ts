@@ -20,6 +20,7 @@ const config: Config = {
         livvic: ["var(--font-livvic)"],
         "century-gothic": ["var(--font-century-gothic)"],
         johnstown: ["var(--font-johnstown)"],
+        dancing: ["var(--font-dancing)"],
       },
     },
   },

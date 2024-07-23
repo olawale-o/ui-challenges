@@ -5,3 +5,24 @@
         rgba(248, 204, 119, 0.16) 104.31%
     );
 }
+
+.article_bg {
+    background-image: url("/farm/article_style.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wheat_bg {
+    background-image: url("/farm/wheat_style.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.house_bg {
+    background-image: url("/farm/style.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+}

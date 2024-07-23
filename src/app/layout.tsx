@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Livvic } from "next/font/google";
+import { DM_Sans, Livvic, Dancing_Script } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -11,6 +11,12 @@ const dmSans = DM_Sans({
 const livvic = Livvic({
   variable: "--font-livvic",
   weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing",
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -26,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} ${livvic.className}`}>
+      <body
+        className={`${dmSans.variable} ${livvic.variable} ${dancingScript.variable}`}
+      >
         {children}
       </body>
     </html>
