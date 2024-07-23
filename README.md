@@ -1,1 +1,1 @@
-[Farm](src/app/\(root)/\(farm))
+[Farm](src/app/\(root)/\(farm)/README.md)
