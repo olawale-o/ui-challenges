@@ -1,5 +1,30 @@
 import Link from "next/link";
-
+const stats = [
+  {
+    id: 1,
+    title: "Years of experience",
+    count: "15",
+    sym: "+",
+  },
+  {
+    id: 2,
+    title: "Students worldwide",
+    count: "100",
+    sym: "+",
+  },
+  {
+    id: 3,
+    title: "Class subject",
+    count: "45",
+    sym: "+",
+  },
+  {
+    id: 4,
+    title: "Students satisfaction",
+    count: "98",
+    sym: "%",
+  },
+];
 const sellings = [
   {
     id: 1,
@@ -122,7 +147,7 @@ const Button = ({
   label?: string;
   pVertical?: string;
   pHorizontal?: string;
-  bgColor: string;
+  bgColor?: string;
   borderThickness?: string;
   borderStyle?: string;
   borderColor?: string;
@@ -142,6 +167,572 @@ const Button = ({
     >
       {title}
     </button>
+  );
+};
+
+const WhyChooseUs = () => {
+  return (
+    <section>
+      <div className="p-5 xl:p-10 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center">
+            <div className="flex gap-6 items-center justify-center">
+              <PrefixDash />
+              <div className="text-2xl text-[#1A2434] leading-[28.8px] font-normal font-inter">
+                Why choose us
+              </div>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-pjs text-4xl font-semibold text-[#1A2434] semi-bold leading-[43.2px]">
+                Best Learning Experience
+              </h2>
+            </div>
+          </div>
+          <div className="mt-10">
+            <div className="grid grid-cols-4">
+              <div className="col-span-1">
+                <div className="p-6">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_8_962)">
+                        <path
+                          opacity="0.2"
+                          d="M40 20C44.1421 20 47.5 16.6421 47.5 12.5C47.5 8.35786 44.1421 5 40 5C35.8579 5 32.5 8.35786 32.5 12.5C32.5 16.6421 35.8579 20 40 20Z"
+                          fill="#1A2434"
+                        />
+                        <path
+                          opacity="0.2"
+                          d="M46.6156 25C47.6798 25.0002 48.7317 25.2268 49.7016 25.6649C50.6714 26.1029 51.5369 26.7423 52.2406 27.5406L66.4031 43.5969C66.7519 43.9457 67.0286 44.3598 67.2174 44.8156C67.4062 45.2713 67.5034 45.7598 67.5034 46.2531C67.5034 46.7464 67.4062 47.2349 67.2174 47.6907C67.0286 48.1464 66.7519 48.5605 66.4031 48.9094C66.0543 49.2582 65.6402 49.5349 65.1844 49.7237C64.7286 49.9125 64.2402 50.0096 63.7469 50.0096C63.2535 50.0096 62.7651 49.9125 62.3093 49.7237C61.8535 49.5349 61.4394 49.2582 61.0906 48.9094L50 40L57.1469 67.1656C57.5504 68.0645 57.5839 69.086 57.2402 70.0094C56.8966 70.9328 56.2033 71.6838 55.3103 72.1002C54.4173 72.5165 53.3963 72.5646 52.4681 72.2342C51.5399 71.9038 50.779 71.2213 50.35 70.3344L40 52.5L29.65 70.3344C29.2209 71.2213 28.4601 71.9038 27.5318 72.2342C26.6036 72.5646 25.5827 72.5165 24.6897 72.1002C23.7967 71.6838 23.1034 70.9328 22.7597 70.0094C22.4161 69.086 22.4496 68.0645 22.8531 67.1656L30 40L18.9031 48.9031C18.1986 49.6076 17.2431 50.0034 16.2469 50.0034C15.2506 50.0034 14.2951 49.6076 13.5906 48.9031C12.8861 48.1986 12.4904 47.2432 12.4904 46.2469C12.4904 45.2506 12.8861 44.2951 13.5906 43.5906L27.7594 27.5406C28.463 26.7423 29.3286 26.1029 30.2984 25.6649C31.2682 25.2268 32.3202 25.0002 33.3844 25H46.6156Z"
+                          fill="#1A2434"
+                        />
+                        <path
+                          d="M40 20C44.1421 20 47.5 16.6421 47.5 12.5C47.5 8.35786 44.1421 5 40 5C35.8579 5 32.5 8.35786 32.5 12.5C32.5 16.6421 35.8579 20 40 20Z"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M46.6156 25C47.6798 25.0002 48.7317 25.2268 49.7016 25.6649C50.6714 26.1029 51.5369 26.7423 52.2406 27.5406L66.4031 43.5969C66.7519 43.9457 67.0286 44.3598 67.2174 44.8156C67.4062 45.2713 67.5034 45.7598 67.5034 46.2531C67.5034 46.7464 67.4062 47.2349 67.2174 47.6907C67.0286 48.1464 66.7519 48.5605 66.4031 48.9094C66.0543 49.2582 65.6402 49.5349 65.1844 49.7237C64.7286 49.9125 64.2402 50.0096 63.7469 50.0096C63.2535 50.0096 62.7651 49.9125 62.3093 49.7237C61.8536 49.5349 61.4394 49.2582 61.0906 48.9094L50 40L57.1469 67.1656C57.5504 68.0645 57.5839 69.086 57.2402 70.0094C56.8966 70.9328 56.2033 71.6838 55.3103 72.1002C54.4173 72.5165 53.3963 72.5646 52.4681 72.2342C51.5399 71.9038 50.779 71.2213 50.35 70.3344L40 52.5L29.65 70.3344C29.2209 71.2213 28.4601 71.9038 27.5318 72.2342C26.6036 72.5646 25.5827 72.5165 24.6897 72.1002C23.7967 71.6838 23.1034 70.9328 22.7597 70.0094C22.4161 69.086 22.4496 68.0645 22.8531 67.1656L30 40L18.9031 48.9031C18.1986 49.6076 17.2431 50.0034 16.2469 50.0034C15.2506 50.0034 14.2951 49.6076 13.5906 48.9031C12.8861 48.1986 12.4904 47.2432 12.4904 46.2469C12.4904 45.2506 12.8861 44.2951 13.5906 43.5906L27.7594 27.5406C28.463 26.7423 29.3286 26.1029 30.2984 25.6649C31.2682 25.2268 32.3202 25.0002 33.3844 25H46.6156Z"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8_962">
+                          <rect width="80" height="80" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-2xl leading-[28.8px] font-semibold">
+                        Expert Instructor
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-[20px] leading-[36px] font-normal opacity-70 tracking-[0.4px]">
+                        Empower yourself with the knowledge and skills gained...
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <Link
+                        href="/"
+                        className="inline-flex gap-4 items-center font-bold text-[#1A2434] font-inter text-20px leading-6 tracking-[0.4px]"
+                      >
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <g opacity="0.8" clipPath="url(#clip0_8_972)">
+                            <path
+                              d="M3.75 12H20.25"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M13.5 5.25L20.25 12L13.5 18.75"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_8_972">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="p-6">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_8_977)">
+                        <path
+                          opacity="0.2"
+                          d="M65 15H15C13.6739 15 12.4021 15.5268 11.4645 16.4645C10.5268 17.4021 10 18.6739 10 20V55C10 56.3261 10.5268 57.5979 11.4645 58.5355C12.4021 59.4732 13.6739 60 15 60H65C66.3261 60 67.5979 59.4732 68.5355 58.5355C69.4732 57.5979 70 56.3261 70 55V20C70 18.6739 69.4732 17.4021 68.5355 16.4645C67.5979 15.5268 66.3261 15 65 15ZM35 47.5V27.5L50 37.5L35 47.5Z"
+                          fill="#1A2434"
+                        />
+                        <path
+                          d="M15 60L65 60C67.7614 60 70 57.7614 70 55V20C70 17.2386 67.7614 15 65 15L15 15C12.2386 15 10 17.2386 10 20L10 55C10 57.7614 12.2386 60 15 60Z"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M50 70H30"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M50 37.5L35 27.5V47.5L50 37.5Z"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8_977">
+                          <rect width="80" height="80" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-2xl leading-[28.8px] font-semibold">
+                        Interactive Learning
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-[20px] leading-[36px] font-normal opacity-70 tracking-[0.4px]">
+                        Empower yourself with the knowledge and skills gained...
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <Link
+                        href="/"
+                        className="inline-flex gap-4 items-center font-bold text-[#1A2434] font-inter text-20px leading-6 tracking-[0.4px]"
+                      >
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <g opacity="0.8" clipPath="url(#clip0_8_972)">
+                            <path
+                              d="M3.75 12H20.25"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M13.5 5.25L20.25 12L13.5 18.75"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_8_972">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="p-6">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_8_992)">
+                        <path
+                          opacity="0.2"
+                          d="M65 27.5H15C14.337 27.5 13.7011 27.7634 13.2322 28.2322C12.7634 28.7011 12.5 29.337 12.5 30V65C12.5 65.663 12.7634 66.2989 13.2322 66.7678C13.7011 67.2366 14.337 67.5 15 67.5H65C65.663 67.5 66.2989 67.2366 66.7678 66.7678C67.2366 66.2989 67.5 65.663 67.5 65V30C67.5 29.337 67.2366 28.7011 66.7678 28.2322C66.2989 27.7634 65.663 27.5 65 27.5ZM40 50C38.7639 50 37.5555 49.6334 36.5277 48.9467C35.4999 48.2599 34.6988 47.2838 34.2258 46.1418C33.7527 44.9997 33.6289 43.7431 33.8701 42.5307C34.1112 41.3183 34.7065 40.2047 35.5806 39.3306C36.4547 38.4565 37.5683 37.8612 38.7807 37.6201C39.9931 37.3789 41.2497 37.5027 42.3918 37.9758C43.5338 38.4488 44.5099 39.2499 45.1967 40.2777C45.8834 41.3055 46.25 42.5139 46.25 43.75C46.25 45.4076 45.5915 46.9973 44.4194 48.1694C43.2473 49.3415 41.6576 50 40 50Z"
+                          fill="#1A2434"
+                        />
+                        <path
+                          d="M65 27.5H15C13.6193 27.5 12.5 28.6193 12.5 30V65C12.5 66.3807 13.6193 67.5 15 67.5H65C66.3807 67.5 67.5 66.3807 67.5 65V30C67.5 28.6193 66.3807 27.5 65 27.5Z"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M27.5 27.5V17.5C27.5 14.1848 28.817 11.0054 31.1612 8.66117C33.5054 6.31696 36.6848 5 40 5C46.0469 5 51.3406 9.29375 52.5 15"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M40 50C43.4518 50 46.25 47.2018 46.25 43.75C46.25 40.2982 43.4518 37.5 40 37.5C36.5482 37.5 33.75 40.2982 33.75 43.75C33.75 47.2018 36.5482 50 40 50Z"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M40 50V57.5"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8_992">
+                          <rect width="80" height="80" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-2xl leading-[28.8px] font-semibold">
+                        Lifetime Access
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-[20px] leading-[36px] font-normal opacity-70 tracking-[0.4px]">
+                        Empower yourself with the knowledge and skills gained...
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <Link
+                        href="/"
+                        className="inline-flex gap-4 items-center font-bold text-[#1A2434] font-inter text-20px leading-6 tracking-[0.4px]"
+                      >
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <g opacity="0.8" clipPath="url(#clip0_8_972)">
+                            <path
+                              d="M3.75 12H20.25"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M13.5 5.25L20.25 12L13.5 18.75"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_8_972">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="p-6">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_8_1008)">
+                        <path
+                          opacity="0.2"
+                          d="M67.5 15H12.5C11.837 15 11.2011 15.2634 10.7322 15.7322C10.2634 16.2011 10 16.837 10 17.5V57.5C10 58.163 10.2634 58.7989 10.7322 59.2678C11.2011 59.7366 11.837 60 12.5 60H50V51.1875C47.0341 48.5353 45.2433 44.8136 45.0215 40.8411C44.7997 36.8685 46.165 32.9706 48.8172 30.0047C51.4694 27.0388 55.1911 25.248 59.1636 25.0262C63.1362 24.8044 67.0341 26.1697 70 28.8219V17.5C70 16.837 69.7366 16.2011 69.2678 15.7322C68.7989 15.2634 68.163 15 67.5 15Z"
+                          fill="#1A2434"
+                        />
+                        <path
+                          d="M60 55C68.2843 55 75 48.2843 75 40C75 31.7157 68.2843 25 60 25C51.7157 25 45 31.7157 45 40C45 48.2843 51.7157 55 60 55Z"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M70 51.1906V70L60 65L50 70V51.1875"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M40 60H12.5C11.837 60 11.2011 59.7366 10.7322 59.2678C10.2634 58.7989 10 58.163 10 57.5V17.5C10 16.837 10.2634 16.2011 10.7322 15.7322C11.2011 15.2634 11.837 15 12.5 15H67.5C68.163 15 68.7989 15.2634 69.2678 15.7322C69.7366 16.2011 70 16.837 70 17.5"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M22.5 42.5H35"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M22.5 32.5H35"
+                          stroke="#1A2434"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8_1008">
+                          <rect width="80" height="80" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-2xl leading-[28.8px] font-semibold">
+                        Verified Certificate
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <div className="font-pjs text-[#1A2434] text-[20px] leading-[36px] font-normal opacity-70 tracking-[0.4px]">
+                        Empower yourself with the knowledge and skills gained...
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <Link
+                        href="/"
+                        className="inline-flex gap-4 items-center font-bold text-[#1A2434] font-inter text-20px leading-6 tracking-[0.4px]"
+                      >
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <g opacity="0.8" clipPath="url(#clip0_8_972)">
+                            <path
+                              d="M3.75 12H20.25"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M13.5 5.25L20.25 12L13.5 18.75"
+                              stroke="#1A2434"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_8_972">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const AboutUs = () => {
+  return (
+    <section>
+      <div className="p-5 xl:p-10 bg-[#F9FCFF]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-2 gap-5 xl:gap-10">
+            <div className="col-span-1">
+              <figure>
+                <img src="/education/e-learn.png" alt="people" />
+              </figure>
+            </div>
+            <div className="col-span-1">
+              <div>
+                <div className="flex gap-6 items-center">
+                  <PrefixDash />{" "}
+                  <div className="text-2xl text-[#1A2434] leading-[28.8px] font-normal font-inter">
+                    About us
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <h2 className="font-pjs text-4xl font-semibold text-[#1A2434] semi-bold leading-[43.2px]">
+                    E-Learning Platform for Digital Skills
+                  </h2>
+                </div>
+                <div className="mt-10">
+                  <div className="opacity-70 text-[20px] leading-[36px] font-normal tracking-[0.4px] font-inter">
+                    Empower yourself with the knowledge and skills gained
+                    through online education! The key to your future! Empower
+                    yourself with the knowledge and skills gained through online
+                    education! The key to your future!
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <Button title="Learn More" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-10">
+            <div className="grid grid-cols-4 gap-4">
+              {stats.map((stat) => (
+                <div key={stat.id}>
+                  <div className="py-6 px-10 text-center">
+                    <span className="inline-flex font-pjs text-[64px] leading-[76.8px] font-bold">
+                      <div className="text-[#1A2434]">{stat.count}</div>
+                      <div className="text-[#A4074D]">{stat.sym}</div>
+                    </span>
+                  </div>
+                  <div className="mt-4">
+                    <div className="text-center text-[#1A2434] font-inter text-[20px] tracking-[0.4px] leading-[36px] opacity-70">
+                      {stat.title}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Testimonials = () => {
+  return (
+    <section>
+      <div className="p-5 xl:p-10 bg-[#F9FCFF]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center">
+            <div className="flex gap-6 items-center justify-center">
+              <PrefixDash />
+              <div className="text-2xl text-[#1A2434] leading-[28.8px] font-normal font-inter">
+                Testimonial
+              </div>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-pjs text-4xl font-semibold text-[#1A2434] semi-bold leading-[43.2px]">
+                Student Testimonial
+              </h2>
+            </div>
+          </div>
+          <div className="mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial) => (
+                <div className="col-span-1" key={testimonial.id}>
+                  <div className="p-8 bg-white">
+                    <div className="">
+                      <div className="flex">
+                        <figure className="relative h-[91px] w-[91px] rounded-full md:aspect-square">
+                          <img
+                            src={testimonial.asset}
+                            alt="Picture"
+                            className="absolute inset-0 w-full h-full object-cover block"
+                          />
+                        </figure>
+                        <div className="ms-4">
+                          <div className="text-[#1A2434] font-inter text-[20px] font-bold leading-6 tracking-[0.4px]">
+                            {testimonial.name}
+                          </div>
+                          <div className="mt-2">
+                            <div className="opacity-70 text-[#1A2434] text-base font-medium tracking-[0.32px] leading-[19.2px]">
+                              {testimonial.role}
+                            </div>
+                          </div>
+                          <div className="mt-4">
+                            <div className="flex items-center gap-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="19"
+                                viewBox="0 0 20 19"
+                                fill="none"
+                              >
+                                <path
+                                  d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+                                  fill="#FFB31F"
+                                />
+                              </svg>
+                              <span className="text-[#1A2434] font-inter text-[20px] opacity-70 font-bold leading-6">
+                                {testimonial.rating}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-4">
+                        <div className="text-[#1A2434] font-inter text-base font-normal leading-[22.4px] tracking-[0.32px] opacity-70">
+                          {testimonial.text}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -275,7 +866,7 @@ const Blog = () => {
                             viewBox="0 0 25 24"
                             fill="none"
                           >
-                            <g opacity="0.8" clip-path="url(#clip0_24_1741)">
+                            <g opacity="0.8" clipPath="url(#clip0_24_1741)">
                               <path
                                 d="M4.08337 12H20.5834"
                                 stroke="#1A2434"
@@ -310,6 +901,9 @@ const Blog = () => {
               ))}
             </div>
           </div>
+          <div className="mt-10 flex justify-center">
+            <Button title="View all" />
+          </div>
         </div>
       </div>
     </section>
@@ -337,7 +931,7 @@ const Newsletter = () => {
                     viewBox="0 0 32 32"
                     fill="none"
                   >
-                    <g opacity="0.7" clip-path="url(#clip0_34_2290)">
+                    <g opacity="0.7" clipPath="url(#clip0_34_2290)">
                       <path
                         d="M4 7H28V24C28 24.2652 27.8946 24.5196 27.7071 24.7071C27.5196 24.8946 27.2652 25 27 25H5C4.73478 25 4.48043 24.8946 4.29289 24.7071C4.10536 24.5196 4 24.2652 4 24V7Z"
                         stroke="#1A2434"
@@ -564,6 +1158,9 @@ export default function Digilearn() {
   return (
     <div>
       <div className="max-w-[1440px] mx-auto">
+        <WhyChooseUs />
+        <AboutUs />
+        <Testimonials />
         <Blog />
         <Newsletter />
         <Footer />
