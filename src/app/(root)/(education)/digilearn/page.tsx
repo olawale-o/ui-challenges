@@ -481,12 +481,82 @@ const Brands = () => {
   );
 };
 
+const Navbar = () => {
+  return (
+    <header className="fixed top-0 left-0 right-0 w-full bg-transparent z-50">
+      <div className="px-10 pt-5">
+        <div className="flex items-stretch">
+          <Link href="/">
+            <img src="/education/Logo.svg" alt="Logo" />
+          </Link>
+          <div className="mx-auto self-stretch">
+            <div className="flex h-full items-center gap-12">
+              <Link
+                href="/"
+                className="text-[#1A2434] text-[20px] font-normal leading-normal font-outfit"
+              >
+                About Us
+              </Link>
+              <Link
+                href="/"
+                className="text-[#1A2434] text-[20px] font-normal leading-normal font-outfit"
+              >
+                Our Class
+              </Link>
+              <Link
+                href="/"
+                className="text-[#1A2434] text-[20px] font-normal leading-normal font-outfit"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/"
+                className="text-[#1A2434] text-[20px] font-normal leading-normal font-outfit"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_34_2470)">
+                <path
+                  d="M19.4062 3.59375H3.59375C3.2125 3.59375 2.84687 3.7452 2.57728 4.01478C2.3077 4.28437 2.15625 4.65 2.15625 5.03125V17.9688C2.15625 18.35 2.3077 18.7156 2.57728 18.9852C2.84687 19.2548 3.2125 19.4062 3.59375 19.4062H19.4062C19.7875 19.4062 20.1531 19.2548 20.4227 18.9852C20.6923 18.7156 20.8438 18.35 20.8438 17.9688V5.03125C20.8438 4.65 20.6923 4.28437 20.4227 4.01478C20.1531 3.7452 19.7875 3.59375 19.4062 3.59375ZM11.5 12.2188C10.3566 12.2176 9.26041 11.7628 8.45192 10.9543C7.64342 10.1458 7.18869 9.04963 7.1875 7.90625C7.1875 7.71563 7.26323 7.53281 7.39802 7.39802C7.53281 7.26323 7.71563 7.1875 7.90625 7.1875C8.09687 7.1875 8.27969 7.26323 8.41448 7.39802C8.54927 7.53281 8.625 7.71563 8.625 7.90625C8.625 8.66875 8.9279 9.40001 9.46707 9.93918C10.0062 10.4783 10.7375 10.7812 11.5 10.7812C12.2625 10.7812 12.9938 10.4783 13.5329 9.93918C14.0721 9.40001 14.375 8.66875 14.375 7.90625C14.375 7.71563 14.4507 7.53281 14.5855 7.39802C14.7203 7.26323 14.9031 7.1875 15.0938 7.1875C15.2844 7.1875 15.4672 7.26323 15.602 7.39802C15.7368 7.53281 15.8125 7.71563 15.8125 7.90625C15.8113 9.04963 15.3566 10.1458 14.5481 10.9543C13.7396 11.7628 12.6434 12.2176 11.5 12.2188Z"
+                  fill="#A4074D"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_34_2470">
+                  <rect width="23" height="23" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div>
+              <input
+                type="text"
+                placeholder="Search"
+                className="focus:outline-none border-solid border-[1px] rounded-lg border-[#EBEFF6] bg-white py-4 ps-4 pe-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
 const Hero = () => {
   return (
     <section>
       <div className="bg-[#F9FCFF] pt-5 px-5 xl:pt-10 xl:px-10">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="h-[929px]">
+        <div className="max-w-[1280px] mx-auto  h-auto">
+          <div className="h-[929px] flex items-center">
             <div className="flex gap-[251px] relative">
               <div className="basis-[624px]  flex flex-col justify-center">
                 <div>
@@ -541,9 +611,9 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="w-[405px] h-[666px] relative">
+              {/* <div className="basis-[405px] h-[666px] relative">
                 <div className="w-[296px] py-4 px-8 bg-white absolute z-10 top-[40px] -left-[219px] rounded-2xl shadow-[8px_8px_16px_0px_rgba(0,0,0,0.04)]">
-                  <div className="text-[#1A2434] text-[20px] font-medium leading-[28px]">
+                  <div className="text-[#1A2434] text-[20px] font-medium leading-[28px] font-poppins">
                     Certified Instructor
                   </div>
                   <div className="mt-4">
@@ -553,10 +623,10 @@ const Hero = () => {
                           <img src="/education/inspector_1.png" />
                         </figure>
                         <div className="">
-                          <div className="text-[#1A2434] text-base font-medium leading-[22.4px]">
+                          <div className="text-[#1A2434] text-base font-medium leading-[22.4px] font-poppins">
                             Donald Robert
                           </div>
-                          <div className="text-[#575455] text-sm font-light leading-[19.6px]">
+                          <div className="text-[#575455] text-sm font-light leading-[19.6px] font-poppins">
                             UI/UX Design
                           </div>
                         </div>
@@ -566,10 +636,10 @@ const Hero = () => {
                           <img src="/education/inspector_2.png" />
                         </figure>
                         <div className="">
-                          <div className="text-[#1A2434] text-base font-medium leading-[22.4px]">
+                          <div className="text-[#1A2434] text-base font-medium leading-[22.4px] font-poppins">
                             John White
                           </div>
-                          <div className="text-[#575455] text-sm font-light leading-[19.6px]">
+                          <div className="text-[#575455] text-sm font-light leading-[19.6px] font-poppins">
                             Web Development
                           </div>
                         </div>
@@ -584,7 +654,7 @@ const Hero = () => {
                     className="absolute inset-0 w-full h-full block object-cover rounded-3xl"
                   />
                 </figure>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -612,7 +682,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
           <div className="mt-10">
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
               <div className="col-span-1">
                 <div className="p-6">
                   <div>
@@ -1021,7 +1091,7 @@ const AboutUs = () => {
     <section>
       <div className="p-5 xl:p-10 bg-[#F9FCFF]">
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-2 gap-5 xl:gap-10">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 xl:gap-10">
             <div className="col-span-1">
               <figure>
                 <img src="/education/e-learn.png" alt="people" />
@@ -1055,7 +1125,7 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="mt-10">
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
               {stats.map((stat) => (
                 <div key={stat.id}>
                   <div className="py-6 px-10 text-center">
@@ -1100,13 +1170,13 @@ const OurClass = () => {
           <div id="tab-container" className="mt-10">
             <ul
               id="tabs"
-              className="flex p-2 bg-[#F4F4F4] rounded-[40px] w-fit mx-auto"
+              className="flex p-2 bg-[#F4F4F4] rounded-[40px] w-full lg:w-fit mx-auto flex-nowrap overflow-x-scroll"
             >
               {tabs.map((tab, i: number) => (
                 <li key={i}>
                   <button
                     type="button"
-                    className={`p-4 text-2xl font-normal font-inter text-[#1E2B33] tracking-[0.48px] leading-[28.8px] rounded-[40px] ${i === 2 && "bg-white opacity-70"}`}
+                    className={`p-4 text-2xl font-normal font-inter text-[#1E2B33] tracking-[0.48px] leading-[28.8px] rounded-[40px] whitespace-nowrap ${i === 2 && "bg-white opacity-70"}`}
                   >
                     {tab.title}
                   </button>
@@ -1115,7 +1185,7 @@ const OurClass = () => {
             </ul>
 
             <div className="mt-10">
-              <div className="grid grid-cols-4">
+              <div className="grid grid-cols-1  md:grid-cols-2 xl:grid-cols-4">
                 {sellings.map((selling) => (
                   <div key={selling.id} className="col-span-1">
                     <div className="py-6 px-6">
@@ -1268,7 +1338,7 @@ const Testimonials = () => {
             </div>
           </div>
           <div className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
               {testimonials.map((testimonial) => (
                 <div className="col-span-1" key={testimonial.id}>
                   <div className="p-8 bg-white">
@@ -1348,7 +1418,7 @@ const Blog = () => {
             </div>
           </div>
           <div className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {articles.map((article) => (
                 <div className="col-span-1" key={article.id}>
                   <div className="p-1 md:p-3 xl:p-6 rounded-[32px] border-solid border-[1px] border-[#EBEFF6]">
@@ -1751,7 +1821,8 @@ export default function Digilearn() {
   return (
     <div>
       <div className="max-w-[1440px] mx-auto">
-        <Hero />
+        <Navbar />
+        {/* <Hero /> */}
         <WhyChooseUs />
         <AboutUs />
         <OurClass />

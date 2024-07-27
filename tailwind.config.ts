@@ -23,6 +23,8 @@ const config: Config = {
         dancing: ["var(--font-dancing)"],
         inter: ["var(--font-inter)"],
         pjs: ["var(--font-pjs)"],
+        outfit: ["var(--font-outfit)"],
+        poppins: ["var(--font-poppins)"],
       },
     },
   },
